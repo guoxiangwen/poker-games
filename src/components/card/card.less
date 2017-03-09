@@ -1,0 +1,99 @@
+
+
+//卡片
+.card {
+    position: relative;
+    margin-right: 10px;
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+    p {
+        text-align: center;
+        font: 100px/220px Georgia, Times New Roman, serif;
+    }
+}
+
+//花色==================
+//混合
+.suit_content(@content, @color) {
+    content: @content;
+    color: @color
+}
+
+.suit_position_before() {
+    font-size: 35px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.suit_position_after() {
+    font-size: 35px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+//方块
+.suitdiamonds {
+    &:before {
+        .suit_position_before();
+        .suit_content("♦", #ff0000)
+    }
+    &:after {
+        .suit_position_after();
+        .suit_content("♦", #ff0000)
+    }
+}
+
+//红心
+.suithearts {
+    &:before {
+        .suit_position_before();
+        .suit_content("♥", #ff0000)
+    }
+    &:after {
+        .suit_position_after();
+        .suit_content("♥", #ff0000)
+    }
+}
+
+//梅花
+.suitclubs {
+    &:before {
+        .suit_position_before();
+        .suit_content("♣", #000)
+    }
+    &:after {
+        .suit_position_after();
+        .suit_content("♣", #000)
+    }
+}
+
+//黑桃
+.suitspades {
+    &:before {
+        .suit_position_before();
+        .suit_content("♠", #000)
+    }
+    &:after {
+        .suit_position_after();
+        .suit_content("♠", #000)
+    }
+}
+
+// div[class*='suit']:before {
+//     position: absolute;
+//     font-size: 35px;
+//     left: 5px;
+//     top: 5px;
+// }
+// div[class*='suit']:after {
+//     position: absolute;
+//     font-size: 35px;
+//     right: 5px;
+//     bottom: 5px;
+// }
