@@ -4,7 +4,16 @@ import './card.less';
 class Card extends Component {
     constructor(props) {
         super(props);
-        // this.handelClick = this.handelClick.bind(this);
+        this.state = {
+            back: true
+        }
+        this.handelClick = this.handelClick.bind(this);
+    }
+
+    handelClick() {
+        this.setState({
+            back:!this.state.back
+        })
     }
     render() {
         let type = "";
@@ -22,17 +31,17 @@ class Card extends Component {
             case "spades":
                 type = "suit_spades";
                 break;
-                //反面
-            case "back":
-                type = "suit_back";
-                break;
+            //反面
+            // case "back":
+            //     type = "suit_back";
+            // break;
             default:
                 type = "suit_spades";
                 break;
         }
         return (
-            <div className={"card " + `${type}`} onClick={this.props.handelClick}>
-                <span>{this.props.text}</span>
+            <div className={this.state.back ? "card suit_back" : "card " + `${type}`} onClick={this.handelClick}>
+                <span>{this.state.back ?"":this.props.text}</span>
             </div>
         );
     }

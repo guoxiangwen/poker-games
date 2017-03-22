@@ -16,10 +16,6 @@ class App extends Component {
     }
     handelClick(e) {
         console.log(e.target)
-        // console.log(Puke.deal())
-        // this.setState({
-        //     card: { type: "clubs", text: "K" }
-        // })
     }
     render() {
         // let people = this.state.card.length;
@@ -32,7 +28,7 @@ class App extends Component {
                             <div className="card-container" key={pi}>
                                 {
                                     p.map((c, ci) => {
-                                        return <Card key={ci} type={c.type} text={c.text} handelClick={this.handelClick} />
+                                        return <Card  key={ci} type={c.type} text={c.text}/>
                                     })
                                 }
                             </div>
@@ -40,7 +36,6 @@ class App extends Component {
                     })
                 }
 
-                {/*<Card type="hearts" text="2" handelClick={this.handelClick} />*/}
                 {/*<Card type={this.state.card.type} text={this.state.card.text} handelClick={this.handelClick} />*/}
 
             </div>
