@@ -5,8 +5,8 @@ class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            back: true
-        }
+            back: true //默认为反面
+        };
         this.handelClick = this.handelClick.bind(this);
     }
 
@@ -31,10 +31,6 @@ class Card extends Component {
             case "spades":
                 type = "suit_spades";
                 break;
-            //反面
-            // case "back":
-            //     type = "suit_back";
-            // break;
             default:
                 type = "suit_spades";
                 break;

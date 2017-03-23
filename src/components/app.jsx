@@ -12,13 +12,9 @@ class App extends Component {
         this.state = {
             card: pokerLists
         };
-        this.handelClick = this.handelClick.bind(this)
-    }
-    handelClick(e) {
-        console.log(e.target)
+        // this.handelClick = this.handelClick.bind(this)
     }
     render() {
-        // let people = this.state.card.length;
         let cards = this.state.card;
         return (
             <div className="app-container">
@@ -35,9 +31,6 @@ class App extends Component {
                         )
                     })
                 }
-
-                {/*<Card type={this.state.card.type} text={this.state.card.text} handelClick={this.handelClick} />*/}
-
             </div>
         );
     }

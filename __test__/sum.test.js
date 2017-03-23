@@ -1,7 +1,7 @@
 import sum from './../src/utils/sum';
 
 describe('add', () => {
-    it('加法测试:', () => {
+    test('加法测试:', () => {
         expect(sum(1, 2)).not.toBe(9);
     });
     test('合并对象测试:', () => {

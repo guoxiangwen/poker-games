@@ -6,6 +6,7 @@ class NotFound extends Component {
 
     }
 
+
     componentWillMount() {
 
     }
@@ -46,5 +47,6 @@ class NotFound extends Component {
 NotFound.propTypes = {
 
 };
+
 
 export default NotFound;
