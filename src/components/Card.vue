@@ -1,4 +1,36 @@
-//卡片
+<template>
+    <div class="card" v-bind:class="back?'suit_back':'suit_clubs'">
+        <span v-bind:text="back?'':'options.text'"></span>
+    </div>
+</template>
+
+
+<script>
+export default {
+    name: 'card',
+    data(){
+        return{
+            back:false
+        }
+    },
+    props:{
+        options:{
+            type:Object,
+            default(){
+                return{
+                    type:"suit_back",
+                    text:"7"
+                }
+            }
+        }
+    },
+    method:{
+
+    }
+}
+</script>
+
+<style lang="less" scoped>
 .card {
     position: relative;
     margin-right: 10px;
@@ -19,8 +51,7 @@
     }
 }
 
-//花色==================
-//混合
+
 .suit_content(@content, @color) {
     content: @content;
     color: @color
@@ -40,7 +71,7 @@
     right: 5px;
 }
 
-//方块
+
 .suit_diamonds {
     &:before {
         .suit_position_before();
@@ -52,7 +83,7 @@
     }
 }
 
-//红心
+
 .suit_hearts {
     &:before {
         .suit_position_before();
@@ -64,7 +95,7 @@
     }
 }
 
-//梅花
+
 .suit_clubs {
     &:before {
         .suit_position_before();
@@ -76,7 +107,7 @@
     }
 }
 
-//黑桃
+
 .suit_spades {
     &:before {
         .suit_position_before();
@@ -88,11 +119,7 @@
     }
 }
 
-
-/**
-反面
-*/
-
 .suit_back {
     background: #ff0000;
 }
+</style>

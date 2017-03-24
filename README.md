@@ -1,10 +1,21 @@
+# vue-starter
 
-[![Build Status](https://travis-ci.org/guoxiangwen/react-starter.svg?branch=webpack2)](https://travis-ci.org/guoxiangwen/react-starter)
+> A Vue.js project
 
+## Build Setup
 
-# react-starter
-react+webpack+es6+less+babel
-# how to start
-1. `npm install --安装`
-2. `npm test --测试`
-3. `npm run build --发布`
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
