@@ -62,6 +62,7 @@
         background: #fff;
         -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
         box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+        transition: .8s ease-in-out;
         &:hover {
             cursor: pointer;
         }
@@ -137,6 +138,8 @@
     }
     
     .suit_back {
-        background: #ff0000;
+        background: linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, .8) 75%) 7px -15px, #36c;
+        background-size: 11px 30px;
+        transform: rotateY(-180deg);
     }
 </style>
