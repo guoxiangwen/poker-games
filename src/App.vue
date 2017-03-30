@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,4 +19,12 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+body {
+    background: #00a651;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+
 </style>
