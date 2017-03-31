@@ -40,7 +40,7 @@
                     case "clubs":
                         return "card suit_clubs"
                         break;
-                    case "c":
+                    case "spades":
                         return "card suit_spades";
                         break;
                     default:

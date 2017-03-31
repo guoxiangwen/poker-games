@@ -1,10 +1,13 @@
 <template>
-    <div id="game" class="app-container">
-        <card text="J" type="diamonds"></card>
-        <card text="Q" type="hearts"></card>
-        <card text="K" type="clubs"></card>
-        <card text="A" type="spades"></card>
-    </div>
+    <transition  name="slide-left">
+        <div id="game" class="app-container">
+            <card text="J" type="diamonds"></card>
+            <card text="Q" type="hearts"></card>
+            <card text="K" type="clubs"></card>
+            <card text="A" type="spades"></card>
+        </div>
+    </transition>
+
 </template>
 
 <script>
